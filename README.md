@@ -118,7 +118,7 @@ players_df.to_sql("Players", conn, if_exists="replace", index=False)
 conn.close()
 
 
-# Question 2. Using the database populated in Question 1, develop queries to answer the questions below. Please include the queries as .sql files with your code submission. a. The win records (percentage win and total wins) for each team by year and gender, excluding ties, matches with no result, and matches decided by the DLS method in the event that, for whatever reason, the planned innings can’t be completed. b. Which male and female teams had the highest win percentages in 2019? c. Which players had the highest strike rate as batsmen in 2019? (Note to receive full credit, you need to account for handling extras properly.) 
+Question 2. Using the database populated in Question 1, develop queries to answer the questions below. Please include the queries as .sql files with your code submission. a. The win records (percentage win and total wins) for each team by year and gender, excluding ties, matches with no result, and matches decided by the DLS method in the event that, for whatever reason, the planned innings can’t be completed. b. Which male and female teams had the highest win percentages in 2019? c. Which players had the highest strike rate as batsmen in 2019? (Note to receive full credit, you need to account for handling extras properly.) 
 #a. The win records (percentage win and total wins) for each team by year and gender, excluding ties, matches with no result, and matches decided by the DLS method:
 
 WITH MatchStatus AS (
@@ -206,7 +206,7 @@ LIMIT 1;
 
 
 
-#Question 3. Please provide a brief written answer to the following question. The coding assessment focused on a batch backfilling use case. If the use case was extended to required incrementally loading new match data on a go-forward basis, how would your solution change?
+Question 3. Please provide a brief written answer to the following question. The coding assessment focused on a batch backfilling use case. If the use case was extended to required incrementally loading new match data on a go-forward basis, how would your solution change?
 If the use case were extended to require incrementally loading new match data on an ongoing basis, several changes and considerations would come into play:
 
 Change in Data Source: The initial solution focused on downloading a full dataset from cricsheet.org. For incremental loading, we would need to establish a mechanism to access and fetch only the new or updated data. This could involve using data APIs, web scraping, or any other method that provides access to new match data as it becomes available.
@@ -237,7 +237,7 @@ Scalability: The solution should be scalable to accommodate the growing volume o
 
 
 
-#Question 4. Can you provide an example of when, during a project or analysis, you learned about (or created) a new technique, method, or tool that you hadn’t known about previously? What inspired you to learn about this and how were you able to apply it?
+Question 4. Can you provide an example of when, during a project or analysis, you learned about (or created) a new technique, method, or tool that you hadn’t known about previously? What inspired you to learn about this and how were you able to apply it?
 In a data analysis project that involved processing a large CSV dataset in Databricks, I encountered a situation where I needed to perform complex operations on date and time data within the CSV file. The dataset included timestamps, and 
 I needed to calculate time intervals, aggregate data by specific time periods, and identify trends over time. This prompted me to learn about the Databricks function window() and the use of time-based aggregations.
 also i have tasked with performing data profiling and quality assessment on a large CSV dataset. The dataset contained multiple columns, and you needed to identify missing values, outliers, and anomalies in the data.
